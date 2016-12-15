@@ -31,3 +31,11 @@
 # Debug files
 *.dSYM/
 *.su
+.pioenvs
+.piolibdeps
+
+#Eclipse
+.settings
+.cproject
+.project
+
