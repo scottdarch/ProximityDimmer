@@ -31,7 +31,10 @@
 // +---------------------------------------------------------------------------+
 // | STATIC DATA
 // +---------------------------------------------------------------------------+
-static const CRGB _on_colour(CRGB::Amethyst);
+/**
+ * Set this to the colour to use for the WS2812 LED on the dev board.
+ */
+static const CRGB _on_colour(CRGB::White);
 
 static const size_t leds_count = 5;
 static CRGB leds[leds_count];
@@ -67,7 +70,7 @@ static void _on_dim(DimmerSwitch *lightswitch, uint8_t dim_value, void *user_dat
 // +---------------------------------------------------------------------------+
 void setup()
 {
-    FastLED.addLeds<WS2812, WS2812_DATA>(leds, leds_count);
+    FastLED.addLeds<WS2812B, WS2812_DATA, GRB>(leds, leds_count);
     _light_switch = get_instance_switch();
     _light_switch->set_indicator_pin(_light_switch, TEENSY_LED, true);
     _light_switch->set_on_switch(_light_switch, _on_switch, 0);

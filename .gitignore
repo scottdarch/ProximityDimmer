@@ -38,4 +38,6 @@
 .settings
 .cproject
 .project
+eclipse.sh
+.metadata
 
