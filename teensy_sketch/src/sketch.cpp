@@ -36,7 +36,7 @@
  */
 static const CRGB _on_colour(CRGB::White);
 
-static const size_t leds_count = 5;
+static const size_t leds_count = 1;
 static CRGB leds[leds_count];
 static DimmerSwitch *_light_switch;
 static CRGB _colour(_on_colour);
@@ -77,7 +77,7 @@ void setup()
     _light_switch->set_on_dim(_light_switch, _on_dim, 0);
     Serial.begin(115200);
     pinMode(LED_BUILTIN, OUTPUT);
-    Serial.println("Starting starlight...");
+    Serial.println("Starting dimmer sample...");
 }
 
 void loop()
